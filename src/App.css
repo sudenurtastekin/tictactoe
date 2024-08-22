@@ -1,0 +1,261 @@
+body {
+  background: #1A2A33;
+}
+
+.status {
+  width: 328px;
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageLogo {
+  display: flex;
+  gap: 8px;
+}
+
+.pageLogo img {
+  width: 32px;
+}
+
+.nextPlayerInfo {
+  background: #1F3641;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 96px;
+  height: 40px;
+  line-height: 17.64px;
+  letter-spacing: 0.875px;
+  text-align: center;
+  color: #A8BFC9;
+  padding: 9px 15px;
+  box-shadow: 0px -4px 0px 0px #10212A inset;
+}
+
+.status button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  background: #A8BFC9;
+  box-shadow: 0px -4px 0px 0px #6B8997 inset;
+  transition: background 0.2s ease;
+}
+
+.status button:hover {
+  background: #DBE8ED;
+}
+
+.allBoards {
+  width: 348px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.square {
+  width: 96px;
+  height: 96px;
+  background: #1F3641;
+  margin: 10px;
+  border: none;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  box-shadow: 0px -8px 0px 0px #10212A inset;
+}
+
+.square:hover {
+  background-color: #A8BFC9;
+}
+
+.square.disabled {
+  pointer-events: none;
+}
+
+.square img {
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.modal {
+  position: fixed;
+  top: -350px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 375px;
+  height: 228px;
+  background-color: #1F3641;
+  padding: 40px 48px;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.modal-buttons {
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.close {
+  display: inline-block;
+  background: #F2B137;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20.16px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #1A2A33;
+  padding: 15px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 0px -4px 0px 0px #CC8B13 inset;
+}
+
+.close:hover {
+  background: #FFC860;
+}
+
+.quit {
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  line-height: 20.16px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 15px 17px;
+  color: #1A2A33;
+  background: #A8BFC9;
+  transition: background 0.2s ease;
+  box-shadow: 0px -4px 0px 0px #6B8997 inset;
+}
+
+.quit:hover {
+  background: #DBE8ED;
+}
+
+.scoreboard {
+  width: 328px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.score {
+  background: #A8BFC9;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 96px;
+  min-height: 64px;
+}
+
+.score p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.64px;
+  letter-spacing: 0.875px;
+  text-align: center;
+  color: #1A2A33;
+}
+
+.score h3 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 25.2px;
+  letter-spacing: 1.25px;
+  text-align: center;
+  color: #1A2A33;
+}
+
+.crossWins {
+  background: #31C3BD;
+}
+
+.circleWins {
+  background: #F2B137;
+}
+
+@media( width >= 768px) {
+  .status {
+      margin-top: 20px;
+      width: 460px;
+  }
+
+  .nextPlayerInfo {
+      width: 140px;
+      height: 52px;
+      padding: 13px 30px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 20.16px;
+      letter-spacing: 1px;
+  }
+
+  .status button {
+      width: 52px;
+      height: 52px;
+  }
+
+  .status button img {
+      width: 20px;
+      margin-left: 3px;
+  }
+
+  .allBoards {
+      width: 480px;
+  }
+
+  .square {
+      width: 140px;
+      height: 140px;
+  }
+
+  .square img {
+      width: 64px;
+  }
+  
+  .scoreboard {
+      width: 460px;
+  }
+
+  .score {
+      width: 140px;
+  }
+
+  .modal {
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+  }
+
+  .modal-content {
+      width: 4000px;
+  }
+}
